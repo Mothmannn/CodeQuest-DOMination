@@ -1,13 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-    
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="bg-primary text-center mt-5 p-4 border container">
+      Video Games Quiz
+    </h1>
+    <section id="quiz-questions" class="container mt-5">
+      <div id="quiz-container" class="border p-4">
+        <h2 id="questions" class="text-center p-4">What game 2025 video game by Hideo Kojima features actor, Norman Reedus as the main character?</h2>
+          <div id="all-options" class="form-check d-flex flex-column">
+            <div id="option1-input" class="form-check d-flex align-items-center mb-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="options"
+                id="option1"
+                value="1"
+              />
+              <label id="answer1" class="form-check-label border px-4 py-2 ms-3" for="option1">The Walking Dead: Daryls Revenge</label>
+            </div>
+            <div id="option2-input" class="form-check d-flex align-items-center mb-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="options"
+                id="option2"
+                value="2"
+              />
+              <label id="answer2" class="form-check-label border px-4 py-2 ms-3" for="option2">Death Stranding 2</label>
+            </div>
+            <div id="option3-input" class="form-check d-flex align-items-center mb-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="options"
+                id="option3"
+                value="3"
+              />
+              <label id="answer3" class="form-check-label border px-4 py-2 ms-3" for="option3">Fallout 4</label>
+            </div>
+            <div id="option4-input" class="form-check d-flex align-items-center mb-3">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="options"
+                id="option4"
+                value="4"
+              />
+              <label id="answer4" class="form-check-label border px-4 py-2 ms-3" for="option4">Baldurs Gate 3</label>
+            </div>
+          </div>
+        <button id="submit-answer" class="btn btn-success mt-3">
+            Submit Answer
+        </button>
+    </section>
+
+    <section id="result" class="container mt-5" hidden>
+      <h2 class="text-center">Result</h2>
+      <div id="result-container" class="border p-4">
+        <p id="result-text" class="text-center"></p>
+        <button id="restart-button" class="btn btn-primary d-block mx-auto mt-3">
+          Restart Quiz
+        </button>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
