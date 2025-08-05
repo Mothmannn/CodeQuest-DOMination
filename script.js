@@ -87,6 +87,7 @@ function checkAnswer() {
   const selectedOption = document.querySelector(
     'input[name="options"]:checked'
   );
+  const answerElements = [answer1, answer2, answer3, answer4];
 
   if (selectedOption) {
     selectedValue = selectedOption ? Number(selectedOption.value) : null;
@@ -110,76 +111,51 @@ function checkAnswer() {
   if (submittedQs === 0) {
     if (selectedValue === correctAnswers[0]) {
       score++;
-      document.getElementById(
-        `answer${correctAnswers[0]}`
-      ).style.backgroundColor = "green";
+      answerElements[correctAnswers[0]-1].style.backgroundColor = "green";
       console.log("Correct answer for question 0");
     } else {
-      document.getElementById(`answer${selectedValue}`).style.backgroundColor =
-        "red";
-      document.getElementById(
-        `answer${correctAnswers[0]}`
-      ).style.backgroundColor = "green";
+      answerElements[correctAnswers[0]-1].style.backgroundColor = "green";
+      answerElements[selectedValue-1].style.backgroundColor = "red";
       console.log("Incorrect answer selected for question 0");
     }
   } else if (submittedQs === 1) {
     if (selectedValue === correctAnswers[1]) {
       score++;
-      document.getElementById(
-        `answer${correctAnswers[1]}`
-      ).style.backgroundColor = "green";
+      answerElements[correctAnswers[1] - 1].style.backgroundColor = "green";
       console.log("Correct answer for question 1");
     } else {
-      document.getElementById(`answer${selectedValue}`).style.backgroundColor =
-        "red";
-      document.getElementById(
-        `answer${correctAnswers[1]}`
-      ).style.backgroundColor = "green";
+      answerElements[selectedValue - 1].style.backgroundColor = "red";
+      answerElements[correctAnswers[1] - 1].style.backgroundColor = "green";
       console.log("Incorrect answer selected for question 1");
     }
   } else if (submittedQs === 2) {
     if (selectedValue === correctAnswers[2]) {
       score++;
-      document.getElementById(
-        `answer${correctAnswers[2]}`
-      ).style.backgroundColor = "green";
+      answerElements[correctAnswers[2] - 1].style.backgroundColor = "green";
       console.log("Correct answer for question 2");
     } else {
-      document.getElementById(`answer${selectedValue}`).style.backgroundColor =
-        "red";
-      document.getElementById(
-        `answer${correctAnswers[2]}`
-      ).style.backgroundColor = "green";
+      answerElements[selectedValue - 1].style.backgroundColor = "red";
+      answerElements[correctAnswers[2] - 1].style.backgroundColor = "green";
       console.log("Incorrect answer selected for question 2");
     }
   } else if (submittedQs === 3) {
     if (selectedValue === correctAnswers[3]) {
       score++;
-      document.getElementById(
-        `answer${correctAnswers[3]}`
-      ).style.backgroundColor = "green";
+      answerElements[correctAnswers[3] - 1].style.backgroundColor = "green";
       console.log("Correct answer for question 3");
     } else {
-      document.getElementById(`answer${selectedValue}`).style.backgroundColor =
-        "red";
-      document.getElementById(
-        `answer${correctAnswers[3]}`
-      ).style.backgroundColor = "green";
+      answerElements[selectedValue - 1].style.backgroundColor = "red";
+      answerElements[correctAnswers[3] - 1].style.backgroundColor = "green";
       console.log("Incorrect answer selected for question 3");
     }
   } else if (submittedQs === 4) {
     if (selectedValue === correctAnswers[4]) {
       score++;
-      document.getElementById(
-        `answer${correctAnswers[4]}`
-      ).style.backgroundColor = "green";
+      answerElements[correctAnswers[4] - 1].style.backgroundColor = "green";
       console.log("Correct answer for question 4");
     } else {
-      document.getElementById(`answer${selectedValue}`).style.backgroundColor =
-        "red";
-      document.getElementById(
-        `answer${correctAnswers[4]}`
-      ).style.backgroundColor = "green";
+      answerElements[selectedValue - 1].style.backgroundColor = "red";
+      answerElements[correctAnswers[4] - 1].style.backgroundColor = "green";
       console.log("Incorrect answer selected for question 4");
     }
   }
